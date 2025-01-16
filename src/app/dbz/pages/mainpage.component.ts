@@ -10,8 +10,19 @@ import { Component } from '@angular/core';
 
 export class DBZMainPageComponent {
 
-    constructor( public dbzService: DBZService) {
+    constructor( private dbzService: DBZService) {}    
         
+    get personajes(): Personaje[] {
+        return [...this.dbzService.listadoPersonajes]
     }
+
+    onDeletePersonaje( id:string ):void {
+        this.dbzService.onBorrarByUUID(id)
+    }
+
+    onNuevoPersonaje ( personaje: Personaje) {
+        this.dbzService.onAddNuevoPersonaje(personaje)
+    }
+    
         
 }

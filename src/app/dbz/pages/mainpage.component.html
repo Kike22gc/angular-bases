@@ -3,9 +3,9 @@
 
 <div class="row">
     <div class="col">
-        <app-listado [listadoPersonajesPorDefecto]="dbzService.listadoPersonajes" (onBorrarByUUID)="dbzService.onBorrarByUUID($event)"></app-listado>
+        <app-listado [listadoPersonajesPorDefecto]="personajes" (onBorrarByUUID)="onDeletePersonaje($event)"></app-listado>
     </div>
     <div class="col">
-        <app-agregarpersonaje (onAddnuevoPersonaje)="dbzService.onAddNuevoPersonaje($event)"></app-agregarpersonaje>
+        <app-agregarpersonaje (onAddnuevoPersonaje)="onNuevoPersonaje($event)"></app-agregarpersonaje>
     </div>
 </div>
