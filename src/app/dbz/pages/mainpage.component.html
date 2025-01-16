@@ -1,0 +1,11 @@
+<h1>Dragon Ball Z - INDEX</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <app-listado [listadoPersonajesPorDefecto]="dbzService.listadoPersonajes" (onBorrarByUUID)="dbzService.onBorrarByUUID($event)"></app-listado>
+    </div>
+    <div class="col">
+        <app-agregarpersonaje (onAddnuevoPersonaje)="dbzService.onAddNuevoPersonaje($event)"></app-agregarpersonaje>
+    </div>
+</div>
